@@ -1,0 +1,31 @@
+{
+ "name": "Luz & Tempo — Histórias que crescem",
+ "short_name": "Luz & Tempo",
+ "description": "Álbum digital para guardar histórias, fotos, sons e pequenos acontecimentos da infância.",
+ "id": "./",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "portrait",
+ "background_color": "#f7f0e4",
+ "theme_color": "#73a58b",
+ "lang": "pt-BR",
+ "icons": [
+  {
+   "src": "icons/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icons/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "icons/icon-maskable.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
