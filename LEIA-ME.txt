@@ -1,0 +1,8 @@
+LUZ & TEMPO — pacote PWA completo
+
+COMO PUBLICAR (vira aplicativo de verdade):
+1. Envie TODOS os arquivos desta pasta (mantendo a estrutura) para uma hospedagem com HTTPS — Netlify, Vercel ou GitHub Pages (todas têm plano gratuito).
+2. Abra o endereço no celular: o navegador oferecerá "Instalar aplicativo".
+3. Instalado, funciona 100% offline; textos e fotos ficam no aparelho, criptografados com o código de acesso.
+
+Obs.: abrir o index.html direto como arquivo também funciona, mas sem instalação nem cache offline (isso exige HTTPS).
