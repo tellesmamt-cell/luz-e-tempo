@@ -152,8 +152,8 @@ h1,h2,h3,.script{overflow-wrap:anywhere}
 .photo-slot:hover{filter:brightness(.97)}
 .photo-slot:focus-visible{outline:3px solid var(--accent); outline-offset:3px}
 .photo-slot img{width:100%; height:100%; object-fit:cover; display:block}
-.photo-slot .hint{padding:10px; text-align:center; color:var(--ink-soft); font-size:.78rem; line-height:1.5}
-.photo-slot .hint b{display:block; font-size:.86rem; color:var(--ink)}
+.photo-slot .hint{padding:10px; text-align:center; color:var(--ink-soft); font-size:.82rem; line-height:1.5}
+.photo-slot .hint b{display:block; font-size:.9rem; color:var(--ink)}
 .photo-slot .cam{font-size:1.5rem; display:block; margin-bottom:4px}
 .photo-slot.wide{aspect-ratio:3/2}
 .photo-del{position:absolute; top:4px; right:4px; z-index:3; width:26px;height:26px;border-radius:50%;
@@ -323,9 +323,13 @@ textarea.write{
 .drawer header b{font-family:'Parisienne',cursive; font-weight:400; font-size:1.5rem; flex:1}
 .drawer .list{overflow:auto; padding:0 10px 18px;flex:1;min-height:0}
 .drawer-actions{padding:8px 16px 16px;border-top:1px solid var(--line)}
-.storage-info{display:block;text-align:center;color:var(--ink-soft);font-size:.66rem;line-height:1.4;margin-bottom:6px}
+.storage-info{display:block;text-align:center;color:var(--ink-soft);font-size:.75rem;line-height:1.4;margin-bottom:6px}
 .btn.danger{background:#fff0f0;color:#8b2525;border:1px solid #e5bcbc}
-.idx-group{font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); font-weight:700; padding:14px 10px 6px}
+.idx-search{margin:4px 12px 6px;padding:11px 13px;border:1.5px solid var(--line);border-radius:12px;font:600 .88rem 'Quicksand','Segoe UI',sans-serif;width:calc(100% - 24px);background:var(--paper);color:var(--ink)}
+.idx-search:focus{outline:2px solid var(--accent2);outline-offset:1px}
+.idx-continue{display:block;width:calc(100% - 16px);margin:8px;padding:12px 14px;border:1.5px dashed var(--accent2);border-radius:14px;background:color-mix(in srgb,var(--accent2) 9%,var(--card));font:600 .76rem 'Quicksand','Segoe UI',sans-serif;text-align:left;cursor:pointer;color:var(--ink)}
+.idx-continue b{display:block;font-size:.92rem;margin-top:2px}
+.idx-group{font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); font-weight:700; padding:14px 10px 6px}
 .idx-item{display:flex; align-items:center; gap:10px; width:100%; text-align:left; border:none; background:transparent;
   padding:10px; border-radius:12px; font-family:'Quicksand'; font-size:.9rem; color:var(--ink); cursor:pointer}
 .idx-open{display:flex;align-items:center;gap:10px;flex:1;min-width:0;text-align:left;border:0;background:transparent;color:inherit;padding:0;cursor:pointer}
@@ -418,10 +422,17 @@ textarea.grow1{resize:none;overflow:hidden;display:block;white-space:pre-wrap;ov
 @media print{textarea.grow1{height:auto!important;overflow:visible!important}}
 #playBtn.playing{background:var(--accent);color:#fff}
 @media(min-width:721px){#menuBtn,#quickTopBtn{display:none}}
-@media(max-width:720px){.topbar #musicBtn,.topbar #playBtn,.topbar #cardBtn,.topbar #fontBtn,.topbar #themeBtn,.topbar #installBtn,.topbar #lockBtn,.topbar #saveBtn,.topbar #printBtn{display:none}}
+@media(max-width:720px){.topbar #musicBtn,.topbar #playBtn,.topbar #cardBtn,.topbar #fontBtn,.topbar #journeyBtn,.topbar #themeBtn,.topbar #installBtn,.topbar #lockBtn,.topbar #saveBtn,.topbar #printBtn{display:none}}
 .menu-list{display:grid;gap:8px}
 .menu-list button{display:flex;align-items:center;gap:12px;border:1.5px solid var(--line);background:var(--paper);border-radius:14px;padding:12px 14px;font:700 .85rem var(--sans);cursor:pointer;text-align:left;color:var(--ink)}
 .menu-list .mico{font-size:1.05rem;width:26px;text-align:center}
+#journeyList{display:grid;gap:8px}
+.jt{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1.5px solid var(--line);background:var(--paper);border-radius:14px;padding:12px 14px;cursor:pointer;text-align:left;width:100%;font-family:var(--sans);color:var(--ink)}
+.jt b{font-size:.85rem;display:block}
+.jt small{font-size:.73rem;color:var(--ink-soft);line-height:1.4;display:block;margin-top:2px}
+.jt i{font-style:normal;font:800 .68rem var(--sans);letter-spacing:.05em;color:var(--ink-soft);border:1.5px solid var(--line);border-radius:999px;padding:5px 11px;flex:none}
+.jt.on{border-color:var(--accent2)}
+.jt.on i{background:var(--accent2);border-color:var(--accent2);color:#fff}
 #guideModal{z-index:360}
 .guide-topics{display:grid;gap:8px}
 .guide-topics details{border:1.5px solid var(--line);border-radius:14px;background:var(--paper)}
@@ -463,7 +474,7 @@ textarea.grow1{resize:none;overflow:hidden;display:block;white-space:pre-wrap;ov
 .idx-item.hid .lbl{text-decoration:line-through}
 .eye{flex:none; border:none; background:transparent; font-size:.95rem; cursor:pointer; padding:4px 6px; border-radius:8px}
 .eye:active{background:var(--paper2)}
-.idx-hint{font-size:.66rem; color:var(--ink-soft); padding:0 12px 6px; line-height:1.4}
+.idx-hint{font-size:.75rem; color:var(--ink-soft); padding:0 12px 6px; line-height:1.4}
 
 /* ---------- YouTube dock ---------- */
 .ytdock{position:fixed; right:10px; bottom:calc(76px + env(safe-area-inset-bottom)); z-index:54;
@@ -552,7 +563,7 @@ body{
 .sheet.clouds{background:linear-gradient(125deg,color-mix(in srgb,var(--paper2) 58%,#fff),var(--paper) 50%,color-mix(in srgb,var(--glow) 10%,#fff))}
 .script{font-family:var(--display);font-weight:700;color:var(--ink);line-height:1.08;letter-spacing:-.025em}
 h2.script{font-size:2.25rem;text-align:left;margin:4px 0 20px;max-width:94%}
-.title-explain{display:block;margin-top:7px;font-family:var(--sans);font-size:.42em;line-height:1.35;letter-spacing:.01em;font-weight:700;color:var(--ink-soft)}
+.title-explain{display:block;margin-top:7px;font-family:var(--sans);font-size:.48em;line-height:1.35;letter-spacing:.01em;font-weight:700;color:var(--ink-soft)}
 h2.script::before{content:'';display:block;width:42px;height:5px;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--glow));margin-bottom:12px}
 .pagefoot{justify-content:flex-start;padding:0 12px}
 .pagenum{font-family:var(--sans);font-size:.58rem;letter-spacing:.14em;color:var(--ink-soft);font-weight:800}
@@ -561,8 +572,8 @@ h2.script::before{content:'';display:block;width:42px;height:5px;border-radius:9
 .polaroid.tilt-r{transform:none}
 .polaroid::before,.polaroid::after{display:none!important}
 .photo-slot{border-radius:18px;background:linear-gradient(135deg,var(--slot),color-mix(in srgb,var(--paper2) 65%,#fff));border:1px solid color-mix(in srgb,var(--line) 80%,#fff)}
-.photo-slot .hint{font-family:var(--sans);font-size:.72rem;line-height:1.45;color:var(--ink-soft);max-width:190px}
-.photo-slot .hint b{font-size:.79rem;color:var(--ink);margin-bottom:2px}
+.photo-slot .hint{font-family:var(--sans);font-size:.78rem;line-height:1.45;color:var(--ink-soft);max-width:190px}
+.photo-slot .hint b{font-size:.84rem;color:var(--ink);margin-bottom:2px}
 .photo-slot .cam{width:42px;height:42px;margin:0 auto 8px;border-radius:14px;background:color-mix(in srgb,var(--accent2) 12%,#fff);display:grid;place-items:center;color:var(--accent2)}
 .photo-del,.photo-pos{background:rgba(20,52,59,.78);backdrop-filter:blur(4px)}
 .polaroid .caption{display:none}
@@ -656,7 +667,7 @@ textarea.write:focus{border-color:var(--accent2);box-shadow:0 0 0 3px color-mix(
 .chartbox{border:1px solid var(--line);border-radius:18px;box-shadow:none}
 .chartbox h4{color:var(--accent2)}
 .printtext{font-family:var(--sans);font-size:1rem;line-height:1.6}
-@media print{.title-explain{font-size:.44em!important;color:var(--ink-soft)!important}}
+@media print{.title-explain{font-size:.48em!important;color:var(--ink-soft)!important}}
 .script,.topbar .brand b,.drawer header b,.modal h3,.cover-frame h1{font-family:var(--display)}
 textarea.write,.fld input,.fld textarea.grow1,.tree .person input,.tree .person textarea.grow1,.visit-row input,.visit-row textarea.grow1,.tag-item input,.tag-item textarea.grow1,.ribbon input,.ribbon textarea.grow1,.cover-name,.printtext{font-family:var(--sans)}
 .network-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0 20px}
@@ -732,7 +743,7 @@ textarea.write,.fld input,.fld textarea.grow1,.tree .person input,.tree .person 
 .welcome-actions .btn{min-height:49px;font-size:.85rem}
 .welcome-note{display:block;margin-top:14px;color:var(--ink-soft);font:600 .65rem/1.45 var(--sans)}
 .demo-banner{position:sticky;top:calc(61px + env(safe-area-inset-top));z-index:49;display:flex;align-items:center;justify-content:center;gap:10px;padding:8px 12px;background:#fff7dd;border-bottom:1px solid #ead69b;color:#604b3d;font:750 .7rem var(--sans)}
-.demo-banner button{border:0;border-radius:999px;background:#604b3d;color:#fff;padding:6px 10px;font:800 .65rem var(--sans);cursor:pointer}
+.demo-banner button{border:0;border-radius:999px;background:#604b3d;color:#fff;padding:7px 12px;font:800 .72rem var(--sans);cursor:pointer}
 
 .welcome-photo{position:relative;width:min(100vw,calc(100dvh*0.7890),760px);margin:auto}
 .welcome-photo img{display:block;width:100%;height:auto}
@@ -891,7 +902,8 @@ textarea.write,.fld input,.fld textarea.grow1,.tree .person input,.tree .person 
           <button type="button" data-guide-mode="essential"><b>Modo Essencial</b><small>Uma seleção mais curta com os principais momentos.</small></button>
           <button type="button" data-guide-mode="complete"><b>Modo Completo</b><small>Todas as páginas e possibilidades do álbum.</small></button>
         </div>
-        <p style="margin-top:8px">Dá para trocar de modo a qualquer momento, sem perder nada do que foi escrito.</p></div></details>
+        <p style="margin-top:8px">Dá para trocar de modo a qualquer momento, sem perder nada do que foi escrito.</p>
+        <p><b>Jornadas:</b> em Menu → Jornadas do álbum, ative capítulos de Adoção, Chegada antecipada, Gêmeos e Família ampliada — e desative os que não fazem parte da história de vocês.</p></div></details>
       <details><summary><span class="gnum">③</span> Como preencher uma página</summary><div>
         <p>1. Toque no espaço da foto (moldura pontilhada).</p>
         <p>2. Escolha uma imagem do aparelho.</p>
@@ -1013,6 +1025,7 @@ textarea.write,.fld input,.fld textarea.grow1,.tree .person input,.tree .person 
   <button type="button" class="iconbtn" id="musicBtn" title="Música" aria-label="Abrir opções de música" aria-pressed="false">♪</button>
   <button type="button" class="iconbtn" id="playBtn" title="Modo apresentação" aria-label="Apresentar o álbum automaticamente">▷</button>
   <button type="button" class="iconbtn" id="fontBtn" title="Letra da escrita" aria-label="Escolher o estilo de letra da escrita" style="font-size:.8rem;font-weight:800">Aa</button>
+  <button type="button" class="iconbtn" id="journeyBtn" title="Jornadas do álbum" aria-label="Escolher as jornadas do álbum">✽</button>
   <button type="button" class="iconbtn" id="cardBtn" title="Cartão de memória para compartilhar" aria-label="Gerar cartão de memória da página atual">✧</button>
   <button type="button" class="iconbtn" id="themeBtn" title="Trocar atmosfera" aria-label="Trocar atmosfera do álbum">◐</button>
   <button type="button" class="iconbtn" id="installBtn" title="Instalar aplicativo" aria-label="Instalar Luz & Tempo no dispositivo" hidden>⇧</button>
@@ -1034,7 +1047,7 @@ textarea.write,.fld input,.fld textarea.grow1,.tree .person input,.tree .person 
 
 <nav class="navfab" aria-label="Navegação do álbum">
   <button type="button" id="prevBtn" title="Página anterior" aria-label="Ir para a página anterior">‹</button>
-  <button type="button" id="stickBtn" title="Símbolos" aria-label="Adicionar símbolo à página">✦</button>
+  <button type="button" class="idxbtn" id="stickBtn" aria-haspopup="dialog" aria-label="Adicionar figurinha à página">Figurinhas</button>
   <button type="button" class="quick-fab" id="quickBtn" title="Guardar um instante" aria-label="Guardar uma lembrança rápida">＋</button>
   <button type="button" class="idxbtn" id="idxBtn" aria-haspopup="dialog" aria-controls="drawer">Índice</button>
   <button type="button" id="nextBtn" title="Próxima página" aria-label="Ir para a próxima página">›</button>
@@ -1048,6 +1061,7 @@ textarea.write,.fld input,.fld textarea.grow1,.tree .person input,.tree .person 
     <button type="button" class="iconbtn" id="closeDrawer" aria-label="Fechar índice">✕</button></header>
   <div class="idx-hint">Ocultar retira a página da navegação e do PDF, mas preserva seus dados no backup editável. Use “Excluir” para apagar definitivamente uma página personalizada.</div>
   <div class="idx-hint" id="progressInfo" aria-live="polite"></div>
+  <input type="search" id="idxSearch" class="idx-search" placeholder="Buscar página ou capítulo…" aria-label="Buscar página no índice" autocomplete="off">
   <div class="list" id="idxList"></div>
   <div class="drawer-actions">
     <span class="storage-info" id="storageInfo">Calculando espaço utilizado…</span>
@@ -1090,6 +1104,19 @@ textarea.write,.fld input,.fld textarea.grow1,.tree .person input,.tree .person 
   </div>
 </div>
 
+<div class="modal" id="journeyModal" role="dialog" aria-modal="true" aria-labelledby="journeyTitle" aria-hidden="true">
+  <div class="card" tabindex="-1" style="max-width:520px">
+    <h3 id="journeyTitle">Jornadas do álbum</h3>
+    <p>Toda família tem um caminho. Ative os capítulos que contam o de vocês — dá para mudar quando quiser, sem apagar nada do que foi escrito.</p>
+    <div id="journeyList"></div>
+    <div style="border-top:1.5px dashed var(--line);margin-top:12px;padding-top:12px">
+      <p style="margin:0 0 8px"><b style="font-size:.82rem">Primeiro ano essencial</b><br><span style="font-size:.76rem">Prefere começar leve? Ative a seleção enxuta, só com os capítulos principais.</span></p>
+      <button type="button" class="btn ghost" id="journeyEssential" style="width:100%">Ativar seleção essencial</button>
+    </div>
+    <button class="btn ghost" data-close>Fechar</button>
+  </div>
+</div>
+
 <div class="modal" id="fontModal" role="dialog" aria-modal="true" aria-labelledby="fontTitle" aria-hidden="true">
   <div class="card" tabindex="-1">
     <h3 id="fontTitle">Letra da escrita</h3>
@@ -1108,6 +1135,7 @@ textarea.write,.fld input,.fld textarea.grow1,.tree .person input,.tree .person 
       <button type="button" data-menu="cardBtn"><span class="mico">✧</span>Cartão de memória</button>
       <button type="button" data-menu="fontBtn"><span class="mico">Aa</span>Letra da escrita</button>
       <button type="button" data-menu="themeBtn"><span class="mico">◐</span>Atmosfera do álbum</button>
+      <button type="button" data-menu="journeyBtn"><span class="mico">✽</span>Jornadas do álbum</button>
       <button type="button" data-menu="installBtn" id="menuInstall" hidden><span class="mico">⇧</span>Instalar aplicativo</button>
       <button type="button" data-menu="lockBtn"><span class="mico">⌾</span>Proteção e código</button>
       <button type="button" data-menu="saveBtn"><span class="mico">⇩</span>Backup do álbum</button>
@@ -1222,7 +1250,7 @@ textarea.write,.fld input,.fld textarea.grow1,.tree .person input,.tree .person 
 const APP_SCHEMA_VERSION = 7;
 const PRODUCT_ID = 'luz-e-tempo-piloto';
 const PRODUCT_NAME = 'Luz & Tempo';
-const mem = { data:{}, photos:{}, videos:{}, photoPos:{}, theme:'bosque', song:0, albumMode:'essential', hidden:{}, stickers:{}, pageMusic:{}, custom:[] };
+const mem = { data:{}, photos:{}, videos:{}, photoPos:{}, theme:'bosque', song:0, albumMode:'essential', journeys:{gestacao:1}, hidden:{}, stickers:{}, pageMusic:{}, custom:[] };
 const mediaIndex={photos:new Set(),videos:new Set()};
 let storageOK = true;
 let persistEnabled = !window.EMBEDDED_DATA;
@@ -1381,7 +1409,7 @@ async function setSetting(key,value){
   try{await idbRecordSet(DB_STORES.settings,{key,value,updatedAt:new Date().toISOString()});localStorage.removeItem('lt:setting:'+key);return true;}catch(e){try{localStorage.setItem('lt:setting:'+key,JSON.stringify(value));return true;}catch(f){return false;}}
 }
 async function deleteSetting(key){try{await idbRecordDel(DB_STORES.settings,key);}catch(e){}try{localStorage.removeItem('lt:setting:'+key);}catch(e){}}
-function coreStatePayload(){return JSON.stringify({schemaVersion:APP_SCHEMA_VERSION,updatedAt:new Date().toISOString(),data:mem.data,theme:mem.theme,song:mem.song,yt:mem.yt||'',hidden:mem.hidden,stickers:mem.stickers,pageMusic:mem.pageMusic,photoPos:mem.photoPos,albumMode:mem.albumMode,custom:mem.custom});}
+function coreStatePayload(){return JSON.stringify({schemaVersion:APP_SCHEMA_VERSION,updatedAt:new Date().toISOString(),data:mem.data,theme:mem.theme,song:mem.song,yt:mem.yt||'',journeys:mem.journeys,hidden:mem.hidden,stickers:mem.stickers,pageMusic:mem.pageMusic,photoPos:mem.photoPos,albumMode:mem.albumMode,custom:mem.custom});}
 async function persistCoreState(){
   const payload=coreStatePayload();
   if(lastGoodPayload&&lastGoodPayload!==payload)sSet('album-data-bak',lastGoodPayload).catch(()=>{});
@@ -1423,6 +1451,7 @@ async function refreshStorageInfo(){
 
 /* ================= Entrada emocional e demonstração ================= */
 let demoMode=false;
+let welcomeAfter=null;
 function reopenWelcome(){
   const gate=document.getElementById('welcomeGate');gate.classList.add('open');
   document.getElementById('welcomeCreate').onclick=()=>closeWelcome();
@@ -1432,12 +1461,12 @@ document.getElementById('homeBtn')&&(document.getElementById('homeBtn').onclick=
 function closeWelcome(){
   document.getElementById('welcomeGate').classList.remove('open');
 }
-async function waitForEntryChoice(force=false){
+async function waitForEntryChoice(force=false, existing=false){
   const seen=await getSetting('welcome.seen',false);
   if(seen&&!force){closeWelcome();return 'owner';}
   document.getElementById('welcomeGate').classList.add('open');
   return new Promise(resolve=>{
-    document.getElementById('welcomeCreate').onclick=async()=>{await setSetting('welcome.seen',true);closeWelcome();resolve('owner');};
+    document.getElementById('welcomeCreate').onclick=async()=>{await setSetting('welcome.seen',true);welcomeAfter=existing?'continue':null;closeWelcome();resolve('owner');};
     document.getElementById('welcomeDemo').onclick=()=>openGuide(false,resolve);
   });
 }
@@ -1658,6 +1687,9 @@ function buildPages(){
   PAGES.push({id:'lugar', grupo:'A origem da luz', titulo:'Preparando o seu lugar (quarto e enxoval)', em:'⌂', render:rLugar});
   PAGES.push({id:'esperavam', grupo:'A origem da luz', titulo:'Quem já esperava por você (familiares e pessoas próximas)', em:'∞', render:()=>rConstelacao('esperavam','Quem já esperava por você (familiares e pessoas próximas)','Pessoas que já faziam parte desta história antes da chegada.')} );
 
+  PAGES.push({id:'adocao-caminho', grupo:'O caminho da adoção', titulo:'A espera por você (o caminho da adoção)', em:'∞', render:rAdocaoCaminho});
+  PAGES.push({id:'adocao-dia', grupo:'O caminho da adoção', titulo:'O dia em que nos tornamos família (o encontro)', em:'☀', render:rAdocaoDia});
+
   PAGES.push({id:'travessia', grupo:'O dia que mudou tudo', titulo:'A travessia até você (parto)', em:'→', render:rTravessia});
   PAGES.push({id:'chegada', grupo:'O dia que mudou tudo', titulo:'Seu instante de chegada (nascimento)', em:'☀', render:rChegada});
   PAGES.push({id:'mundo', grupo:'O dia que mudou tudo', titulo:'O mundo recebeu você assim (contexto do nascimento)', em:'◎', render:rMundo});
@@ -1665,6 +1697,11 @@ function buildPages(){
   PAGES.push({id:'cuidados', grupo:'O dia que mudou tudo', titulo:'Entre cuidados e descobertas (primeiros dias e cuidados)', em:'✚', render:rCuidados});
   PAGES.push({id:'porta', grupo:'O dia que mudou tudo', titulo:'A porta de casa se abriu (chegada em casa)', em:'⌂', render:rPorta});
   PAGES.push({id:'marcas', grupo:'O dia que mudou tudo', titulo:'Pequenas marcas, grande presença (mãos e pés)', em:'✣', render:rMarcas});
+
+  PAGES.push({id:'prema-forca', grupo:'Uma chegada antecipada', titulo:'Você chegou antes (dias de cuidado)', em:'✚', render:rPremaForca});
+  PAGES.push({id:'prema-alta', grupo:'Uma chegada antecipada', titulo:'O dia de ir para casa (a alta)', em:'⌂', render:rPremaAlta});
+  PAGES.push({id:'gemeos-dois', grupo:'Dois de uma vez', titulo:'Dois de uma vez (cada um do seu jeito)', em:'◐', render:rGemeosDois});
+  PAGES.push({id:'gemeos-momentos', grupo:'Dois de uma vez', titulo:'Momentos em dupla (vocês, juntos)', em:'✦', render:rGemeosMomentos});
 
   MESES.forEach(([m,t])=>PAGES.push({id:'mes'+m, grupo:'O primeiro ciclo', titulo:`Capítulo ${String(m).padStart(2,'0')} · ${t}`, em:'◌', render:()=>rMes(m,t)}));
   PAGES.push({id:'crescimento', grupo:'O primeiro ciclo', titulo:'O desenho do crescimento (peso e altura)', em:'↗', render:rCrescimento});
@@ -1680,6 +1717,7 @@ function buildPages(){
   PAGES.push({id:'pet', grupo:'Nossa rede de afeto', titulo:'Um companheiro de outra espécie (animal de estimação)', em:'◇', render:rPet});
   PAGES.push({id:'vozes', grupo:'Nossa rede de afeto', titulo:'Vozes para guardar (vídeos e mensagens da família)', em:'◍', render:rVozes});
   PAGES.push({id:'rituais', grupo:'Nossa rede de afeto', titulo:'Rituais da nossa casa (rotina familiar)', em:'⌂', render:rRituais});
+  PAGES.push({id:'ampliada-casa', grupo:'Nossa rede de afeto', titulo:'Casa cheia (quem cuida junto)', em:'✦', render:rAmpliadaCasa});
   PAGES.push({id:'favoritos', grupo:'Nossa rede de afeto', titulo:'O que faz seus olhos brilharem (preferências e favoritos)', em:'✦', render:rFavoritos});
   PAGES.push({id:'perguntas', grupo:'Nossa rede de afeto', titulo:'Perguntas para quem ama você', em:'↗', render:rPerguntasFamilia});
 
@@ -1712,7 +1750,12 @@ const ESSENTIAL_PAGE_IDS = new Set([
   'data-natal','data-anonovo','rede','vozes','rituais','favoritos',
   'mae-nasceu','mae-invisivel','mae-forca','dia-maes','mae-hoje','festa1','anteseagora','linhadotempo','palavras','carta','cartas-tempo','notas'
 ]);
+const JOURNEY_PAGE_MAP={adocao:['adocao-caminho','adocao-dia'],prematuridade:['prema-forca','prema-alta'],gemeos:['gemeos-dois','gemeos-momentos'],ampliada:['ampliada-casa']};
+const GESTACAO_PAGES=new Set(['descoberta','espera','celebracao','travessia']);
 function isModeHidden(id){
+  if(!mem.journeys)mem.journeys={gestacao:1};
+  for(const k in JOURNEY_PAGE_MAP) if(JOURNEY_PAGE_MAP[k].includes(id)) return !mem.journeys[k];
+  if(GESTACAO_PAGES.has(id)&&!mem.journeys.gestacao) return true;
   return mem.albumMode==='essential' && !ESSENTIAL_PAGE_IDS.has(id) && !String(id).startsWith('cus');
 }
 
@@ -1792,13 +1835,13 @@ function normalizeState(raw){
   return {
     schemaVersion:clamp(o.schemaVersion,1,APP_SCHEMA_VERSION,1), updatedAt:typeof o.updatedAt==='string'?o.updatedAt:'', data:cleanStringMap(o.data),
     theme:themes.includes(normalizedTheme)?normalizedTheme:'bosque', song:clamp(o.song,0,2,0),
-    yt:ytId(o.yt)?String(o.yt).trim():'', albumMode:o.albumMode==='complete'?'complete':'essential', hidden, stickers, pageMusic, photoPos, custom, photos, videos
+    yt:ytId(o.yt)?String(o.yt).trim():'', albumMode:o.albumMode==='complete'?'complete':'essential', journeys:(o&&typeof o.journeys==='object'&&o.journeys)?{gestacao:o.journeys.gestacao?1:0,adocao:o.journeys.adocao?1:0,prematuridade:o.journeys.prematuridade?1:0,gemeos:o.journeys.gemeos?1:0,ampliada:o.journeys.ampliada?1:0}:{gestacao:1}, hidden, stickers, pageMusic, photoPos, custom, photos, videos
   };
 }
 function applyState(raw){
   const o=normalizeState(raw);
   mem.data=o.data; mem.theme=o.theme; mem.song=o.song; mem.yt=o.yt; mem.albumMode=o.albumMode;
-  mem.hidden=o.hidden; mem.stickers=o.stickers; mem.pageMusic=o.pageMusic; mem.custom=o.custom;
+  mem.journeys=o.journeys||{gestacao:1}; mem.hidden=o.hidden; mem.stickers=o.stickers; mem.pageMusic=o.pageMusic; mem.custom=o.custom;
   mem.photos=o.photos; mem.videos=o.videos; mem.photoPos=o.photoPos;
   mediaIndex.photos=new Set(Object.keys(mem.photos)); mediaIndex.videos=new Set(Object.keys(mem.videos));
   lastSavedAt=o.updatedAt&&!isNaN(Date.parse(o.updatedAt))?new Date(o.updatedAt):null;
@@ -2283,6 +2326,67 @@ function rCartasTempo(){
   return `<div class="sheet hearts"><h2 class="script">Cartas do tempo <span class="title-explain">(para abrir em datas especiais)</span></h2>
     ${introF('Cartas lacradas com data marcada: aos 5 anos, aos 15, na formatura. A contagem regressiva corre sozinha.')}${out}</div>`;
 }
+function rAdocaoCaminho(){
+  return `<div class="sheet hearts"><h2 class="script">A espera por você <span class="title-explain">(o caminho da adoção)</span></h2>
+    ${introF('Toda espera tem sua própria história. Esta página guarda a de vocês — do primeiro desejo ao dia do encontro.')}
+    ${areaF('adocao.desejo',3,'quando o desejo de te encontrar nasceu em nós…')}
+    ${areaF('adocao.espera',3,'como foi o tempo de espera: os preparos, os sonhos, as conversas…')}
+    ${visualPhotoF('adocao.foto1','um registro desse tempo de espera')}
+    ${areaF('adocao.soubemos',3,'o momento em que soubemos de você…')}
+  </div>`;
+}
+function rAdocaoDia(){
+  return `<div class="sheet dots"><h2 class="script">O dia em que nos tornamos família <span class="title-explain">(o encontro)</span></h2>
+    ${introF('Existe um dia em que a vida se divide em antes e depois. Este foi o nosso.')}
+    ${dateF('adocao.dia.data','O dia do nosso encontro')}
+    ${visualPhotoF('adocao.foto2','a primeira foto de vocês juntos')}
+    ${areaF('adocao.primeiro',3,'o primeiro olhar, o primeiro colo, as primeiras horas…')}
+    ${areaF('adocao.sentimento',3,'o que sentimos ao te ter finalmente com a gente…')}
+  </div>`;
+}
+function rPremaForca(){
+  return `<div class="sheet ruled"><h2 class="script">Você chegou antes <span class="title-explain">(dias de cuidado)</span></h2>
+    ${introF('Alguns começos pedem mais coragem. Esta página guarda a força dos seus primeiros dias — e a nossa.')}
+    ${areaF('prema.chegada',3,'como foi a sua chegada antecipada…')}
+    ${inputF('prema.tempo','Você nasceu com (semanas, peso…)')}
+    ${areaF('prema.dias',4,'os dias de cuidado: as pequenas vitórias de cada dia, as pessoas que cuidaram de você…')}
+    ${visualPhotoF('prema.foto','um registro desse tempo (se fizer bem guardar)')}
+  </div>`;
+}
+function rPremaAlta(){
+  return `<div class="sheet dots"><h2 class="script">O dia de ir para casa <span class="title-explain">(a alta)</span></h2>
+    ${introF('O dia em que os fios e monitores ficaram para trás — e o mundo virou casa.')}
+    ${dateF('prema.alta.data','O dia da alta')}
+    ${visualPhotoF('prema.altafoto','a foto da saída ou da chegada em casa')}
+    ${areaF('prema.altatxt',4,'como foi atravessar a porta com você…')}
+  </div>`;
+}
+function rGemeosDois(){
+  return `<div class="sheet hearts"><h2 class="script">Dois de uma vez <span class="title-explain">(cada um do seu jeito)</span></h2>
+    ${introF('O amor não se dividiu — dobrou. E cada um de vocês tem um jeito só seu.')}
+    <div class="comp-pair">
+      <div>${visualPhotoF('gemeos.f1','foto de um')}<input data-k="gemeos.n1" value="${V('gemeos.n1')}" placeholder="nome" aria-label="Nome do primeiro"></div>
+      <span class="comp-arrow" aria-hidden="true">＆</span>
+      <div>${visualPhotoF('gemeos.f2','foto do outro')}<input data-k="gemeos.n2" value="${V('gemeos.n2')}" placeholder="nome" aria-label="Nome do segundo"></div>
+    </div>
+    ${areaF('gemeos.jeitos',4,'as diferenças que já apareceram: o jeito de dormir, de pedir colo, de sorrir…')}
+  </div>`;
+}
+function rGemeosMomentos(){
+  return `<div class="sheet dots"><h2 class="script">Momentos em dupla <span class="title-explain">(vocês, juntos)</span></h2>
+    ${introF('As cenas que só quem tem dois (ou mais!) conhece.')}
+    ${visualPhotoF('gemeos.jf1','os dois juntos')}
+    ${areaF('gemeos.cena',3,'uma cena de vocês dois que ninguém acreditaria…')}
+    ${areaF('gemeos.rotina',3,'como é a rotina em dobro: o caos bonito de cada dia…')}
+  </div>`;
+}
+function rAmpliadaCasa(){
+  let rows='';for(let i=0;i<6;i++)rows+=`<div class="visit-row"><input class="who" data-k="ampliada.p${i}.nome" value="${V('ampliada.p'+i+'.nome')}" placeholder="quem é" aria-label="Pessoa ${i+1}"><input data-k="ampliada.p${i}.papel" value="${V('ampliada.p'+i+'.papel')}" placeholder="o que faz por vocês (busca na escola, conta histórias, faz a sopa…)" aria-label="Papel de ${i+1}"></div>`;
+  return `<div class="sheet ruled"><h2 class="script">Casa cheia <span class="title-explain">(quem cuida junto)</span></h2>
+    ${introF('Família é quem cuida. Avós, tios, madrinhas, vizinhos-quase-parentes: aqui cabem todos.')}${rows}
+    ${areaF('ampliada.txt',3,'uma cena de casa cheia que merece ficar guardada…')}
+  </div>`;
+}
 function rCrescimento(){
   const peso=[],alt=[];
   MESES.forEach(([m])=>{
@@ -2381,7 +2485,7 @@ function renderPage(i, dir=0){
   applyPageMusic(PAGES[target].id); /* dentro do clique/gesto: mini-janela pode abrir sozinha */
   const old = host.querySelector('.page');
   const paint = ()=>{
-    cur = target;
+    cur = target;try{if(!demoMode)localStorage.setItem('lt:last-page',PAGES[cur].id);}catch(e){}
     host.innerHTML = pageHTML(PAGES[cur], cur);
     hydrate(host);
     updateNavigationState();
@@ -2859,6 +2963,8 @@ function closeDrawer(){
   if(lastFocus?.focus) lastFocus.focus();
 }
 document.getElementById('idxBtn').onclick=openDrawer;
+const idxSearchEl=document.getElementById('idxSearch');
+idxSearchEl.addEventListener('input',()=>{idxQuery=idxSearchEl.value.trim().toLowerCase();refreshIndex();});
 document.getElementById('closeDrawer').onclick=closeDrawer;
 overlay.onclick=closeDrawer;
 
@@ -2875,12 +2981,16 @@ function pageFilled(p){
          [...mediaIndex.videos].some(k=>belongsToPrefix(k,pref)) ||
          !!mem.stickers[p.id]?.length || !!mem.pageMusic[p.id];
 }
+let idxQuery='';
 function refreshIndex(){
   const list=document.getElementById('idxList'); let html='', g='';
   const filledCount=PAGES.filter(p=>!isModeHidden(p.id)&&pageFilled(p)).length;
   document.getElementById('progressInfo').innerHTML=progressHTML(true);
+  if(!idxQuery){try{const lp=localStorage.getItem('lt:last-page');const li=PAGES.findIndex(p=>p.id===lp);
+    if(li>0&&li!==cur&&!isHidden(lp)&&!isModeHidden(lp))html+=`<button type="button" class="idx-continue" data-go="${li}">Continue de onde parou<b>${esc(PAGES[li].titulo)}</b></button>`;}catch(e){}}
   PAGES.forEach((p,i)=>{
     if(isModeHidden(p.id)) return;
+    if(idxQuery&&!(p.titulo+' '+p.grupo).toLowerCase().includes(idxQuery)) return;
     if(p.grupo!==g){ g=p.grupo; html+=`<div class="idx-group">${g}</div>`; }
     const hid=!!mem.hidden[p.id];
     html+=`<div class="idx-item ${i===cur?'cur':''} ${pageFilled(p)?'filled':''} ${hid?'hid':''}">
@@ -3341,7 +3451,7 @@ async function collectBackupPayload(){
   for(const [k,v] of Object.entries(mem.photoPos)) if(refs.photos.has(k)) photoPos[k]=v;
   return {
     format:'luz-tempo-backup', product:PRODUCT_ID, schemaVersion:APP_SCHEMA_VERSION, exportedAt:new Date().toISOString(),
-    data,theme:mem.theme,song:mem.song,yt:mem.yt||'',albumMode:mem.albumMode,hidden,stickers,pageMusic,photoPos,custom:mem.custom,
+    data,theme:mem.theme,song:mem.song,yt:mem.yt||'',albumMode:mem.albumMode,journeys:mem.journeys,hidden,stickers,pageMusic,photoPos,custom:mem.custom,
     photos,videos
   };
 }
@@ -3478,6 +3588,27 @@ const remT=setInterval(()=>{
   if(days>=10)showSaveStatus(`Faz ${days} dias que uma memória não é guardada. Que tal registrar um instante de hoje? ✨`,'warn',7000);
 },4000);
 
+/* ===== jornadas ===== */
+const JOURNEYS=[
+ ['gestacao','Gestação','A descoberta, a espera, o chá de bebê e o parto.'],
+ ['adocao','Adoção','A espera, o encontro e o dia em que se tornaram família.'],
+ ['prematuridade','Chegada antecipada','Para quem chegou antes da hora: os dias de cuidado e a ida para casa.'],
+ ['gemeos','Gêmeos','Cada um do seu jeito — e os dois juntos.'],
+ ['ampliada','Família ampliada','Avós, tios, madrinhas e todo mundo que cuida junto.']];
+const journeyModal=document.getElementById('journeyModal');
+function renderJourneyList(){
+  const el=document.getElementById('journeyList');
+  el.innerHTML=JOURNEYS.map(([k,nome,desc])=>`<button type="button" class="jt ${mem.journeys[k]?'on':''}" data-journey="${k}" aria-pressed="${mem.journeys[k]?'true':'false'}"><span><b>${nome}</b><small>${desc}</small></span><i>${mem.journeys[k]?'Ativa':'Desligada'}</i></button>`).join('');
+  el.querySelectorAll('[data-journey]').forEach(b=>b.onclick=()=>{
+    const k=b.dataset.journey;mem.journeys[k]=mem.journeys[k]?0:1;
+    scheduleSave();renderJourneyList();refreshIndex();
+    if(isModeHidden(PAGES[cur].id)||isHidden(PAGES[cur].id))renderPage(seekVisible(cur,1));
+    showSaveStatus(mem.journeys[k]?'Capítulos adicionados ao álbum ✓':'Capítulos guardados — nada foi apagado','ok',2400);
+  });
+}
+document.getElementById('journeyBtn').onclick=()=>{renderJourneyList();openModal(journeyModal,document.getElementById('journeyBtn'));};
+document.getElementById('journeyEssential').onclick=()=>{mem.albumMode='essential';scheduleSave();refreshIndex();closeModal(journeyModal);showSaveStatus('Primeiro ano essencial ativado — seleção enxuta de capítulos','ok',2600);};
+
 /* ===== letra da escrita ===== */
 const FONTES=[['','Padrão do álbum','inherit'],['cursiva','Cursiva elegante',"'Segoe Script','Lucida Handwriting','Apple Chancery',cursive"],['crianca','Letra de criança',"'Comic Sans MS','Comic Neue','Chalkboard SE',sans-serif"],['maquina','Máquina de escrever',"'Courier New',monospace"],['limpa','Limpa e moderna',"'Segoe UI',Arial,sans-serif"]];
 function applyFontPref(){document.body.dataset.font=mem.data['pref.fonte']||'';}
@@ -3518,7 +3649,7 @@ document.querySelectorAll('#menuList [data-menu]').forEach(b=>b.onclick=()=>{clo
   const preloadedRaw=window.EMBEDDED_DATA?null:await sGetRaw('album-data');
   const existingAlbum=!!preloadedRaw;
   let forceDemo=false;try{forceDemo=sessionStorage.getItem('lt.forceDemo')==='1';sessionStorage.removeItem('lt.forceDemo');}catch(e){}
-  const entry=forceDemo?'demo':await waitForEntryChoice(true);
+  const entry=forceDemo?'demo':await waitForEntryChoice(true, existingAlbum);
   if(entry==='demo'){
     demoMode=true;persistEnabled=false;applyState(makeDemoState());document.body.classList.remove('locked');const banner=document.getElementById('demoBanner');document.querySelector('.topbar').after(banner);banner.hidden=false;document.getElementById('lockBtn').style.display='none';document.getElementById('saveBtn').style.display='none';buildPages();document.body.dataset.theme=mem.theme;document.getElementById('brandName').textContent='Luz & Tempo · '+childNameRaw();document.title='Demonstração — Luz & Tempo';renderPage(PAGES.findIndex(p=>p.id==='inicio'));return;
   }
@@ -3542,6 +3673,7 @@ document.querySelectorAll('#menuList [data-menu]').forEach(b=>b.onclick=()=>{clo
   }
   buildPages();document.body.dataset.theme=mem.theme;const nome=mem.data['capa.nome'];if(nome){document.getElementById('brandName').textContent='Luz & Tempo · '+nome;document.title=nome+' — Luz & Tempo';}
   renderPage(PAGES.findIndex(p=>p.id==='inicio'));refreshStorageInfo();
+  if(welcomeAfter==='continue'){welcomeAfter=null;try{const lp=localStorage.getItem('lt:last-page');const li=PAGES.findIndex(p=>p.id===lp);if(li>0&&!isHidden(lp)&&!isModeHidden(lp))renderPage(li);}catch(e){}}
   migrateToEncrypted();
   try{if(navigator.storage?.persist&&!(await navigator.storage.persisted())){const granted=await navigator.storage.persist();if(granted)showSaveStatus('Armazenamento protegido contra limpeza automática ✓','ok',2800);}}catch(e){}
   try{const last=await getSetting('backup.last',null);const ageDays=last?Math.floor((Date.now()-Date.parse(last))/86400000):null;if(existingAlbum&&(ageDays===null||ageDays>=14))setTimeout(()=>showSaveStatus(ageDays===null?'Dica: gere um backup do álbum (botão ⇩) para nunca perder nada.':`Seu último backup tem ${ageDays} dias. Que tal gerar um novo? (⇩)`,'warn',7000),9000);}catch(e){}
